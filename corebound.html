@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="KatoK_logoOnly.png" />
+    <title>Corebound - Kato's Kraken</title>
+    <link rel="stylesheet" href="corebound.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="KatoK_indexLogo.png" alt="Kato's Kraken Logo" />
+        <img
+          src="LogoName.png"
+          alt="Kato's Kraken Text Logo"
+          class="logo-text"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Games</a>
+            <ul class="dropdown-menu">
+              <li><a href="corebound.html">Corebound</a></li>
+              <li><a href="bigbosscleanup.html">Big Boss Cleanup</a></li>
+            </ul>
+          </li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <img src="Corebound_Logo.png" alt="Corebound Logo" class="corebound-logo" />
+
+    <div class="logo-divider"></div>
+
+    <!-- CHARACTER CARDS -->
+    <section class="character-cards">
+      <!-- LAYER 1: MAIN CHARACTER -->
+      <div class="card-row single">
+        <div class="character-card" onclick="showModal('mainCharacterModal')">
+          <span class="card-label">Main Character</span>
+          <img src="Ari_PlayingCard.png" alt="Ari - Stage 1" />
+        </div>
+      </div>
+
+      <!-- LAYER 2: MINI BOSSES -->
+      <div class="card-row trio">
+        <div class="character-card" onclick="showModal('miniBoss1')">
+          <span class="card-label">Mini Boss</span>
+          <img src="Sha_MiniBoss_Card.png" alt="Mini Boss 1" />
+        </div>
+        <div class="character-card" onclick="showModal('miniBoss2')">
+          <span class="card-label">Mini Boss</span>
+          <img src="SeWu_MiniBoss_Card.png" alt="Mini Boss 2" />
+        </div>
+        <div class="character-card" onclick="showModal('miniBoss3')">
+          <span class="card-label">Mini Boss</span>
+          <img src="Xin_MiniBoss_card.png" alt="Mini Boss 3" />
+        </div>
+      </div>
+
+      <!-- LAYER 3: MAIN VILLAIN -->
+      <div class="card-row single">
+        <div class="character-card" onclick="showModal('villain')">
+          <span class="card-label">Main Villain</span>
+          <img src="MainVillian_Card.png" alt="Villain - Bio-Overlord" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT STATUS SECTION -->
+    <section class="development-status">
+      <h2>🚧 In Development</h2>
+      <p>
+        <strong>Corebound</strong> is currently in active development by a
+        passionate indie team at Kato’s Kraken. Everything you see here — from
+        the art to the story — is part of a growing vision still taking shape.
+      </p>
+      <p>
+        If you’re a developer, artist, writer, animator, or just someone who’s
+        excited about the world of Corebound, we’d love to hear from you. We're
+        currently welcoming volunteers and collaborators to join our creative
+        journey.
+      </p>
+      <a href="careers.html" class="join-button">Join the Team</a>
+    </section>
+
+    <!-- ABOUT THE GAME -->
+    <section class="story-section">
+      <div class="content-block">
+        <div class="text-content">
+          <h2>The Story</h2>
+          <p>
+            In a post-collapse dystopian Earth where bio-mechanical horrors roam
+            the ruins of civilization, you play as Ari—a boy trapped between
+            human emotion and machine logic. Your only weapon is your heart,
+            your mind, and what's left of your humanity.
+          </p>
+        </div>
+        <div class="image-placeholder story-image"></div>
+      </div>
+    </section>
+
+    <!-- GAMEPLAY SECTION -->
+    <section class="gameplay-section">
+      <div class="content-block reverse">
+        <div class="text-content">
+          <h2>Gameplay</h2>
+          <p>
+            Corebound is a 2D side-scroller with RPG elements, real-time
+            decisions, and deep exploration. Players fight to uncover the truth
+            about the world, and themselves, navigating brutal enemies and
+            branching storylines with lasting consequences.
+          </p>
+        </div>
+        <div class="image-placeholder gameplay-image"></div>
+      </div>
+    </section>
+
+    <!-- THEME SECTION -->
+    <section class="theme-section">
+      <div class="content-block">
+        <div class="text-content">
+          <h2>Theme</h2>
+          <p>
+            Corebound explores the tension between humanity and technology
+            through an emotionally driven narrative. The world is cold, brutal,
+            and haunting—yet your journey is filled with choices that echo with
+            personal and philosophical weight.
+          </p>
+        </div>
+        <div class="image-placeholder theme-image"></div>
+      </div>
+    </section>
+
+    <!-- PITCH DECK EMBED -->
+    <section class="pitch-deck">
+      <h2>Pitch Deck</h2>
+      <p>
+        Explore our development vision, timeline, and financial analysis in the
+        Corebound pitch deck below:
+      </p>
+      <div class="pitch-embed">
+        <iframe
+          loading="lazy"
+          src="https://docs.google.com/presentation/d/10jp1wWsH9lfYAYqFbVxXDXWggeBKSX2Hl8hiI_KJksA/preview"
+          frameborder="0"
+          width="100%"
+          height="480"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>
+        Kato’s Kraken Game Studio is a fictional indie game studio created for
+        portfolio and demonstration purposes. © 2025 All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Modal for Main Character -->
+    <div id="mainCharacterModal" class="modal" style="display: flex">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mainCharacterModal')"
+          >&times;</span
+        >
+        <h2>Ari - Stage 1</h2>
+        <p><strong>Status:</strong> 100% Human</p>
+        <p><strong>Weapon:</strong> Sword</p>
+        <p>
+          <strong>Background:</strong> Ari is a young survivor who has found
+          himself in the desert on the outskirts of a ruined, futuristic city.
+          He’s compassionate but haunted by loss, with a destiny tied to
+          humanity’s last hope.
+        </p>
+        <img src="Ari_PlayingCard.png" alt="Ari Card" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Mini Boss 1 Modal -->
+    <div id="miniBoss1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('miniBoss1')">&times;</span>
+        <h2>Sha - Mini Boss</h2>
+        <p><strong>Ability:</strong> Controls the Undead</p>
+        <p><strong>Weapon:</strong> Retrievable Staff</p>
+        <p>
+          King of the undead bio-mech, Sha is the first major threat Ari faces.
+          Controls and summons the army that you have been fighting through the
+          desert thus far.
+        </p>
+        <img src="Sha_MiniBoss_Card.png" alt="Sha" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Mini Boss 2 Modal -->
+    <div id="miniBoss2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('miniBoss2')">&times;</span>
+        <h2>SeWu - Mini Boss</h2>
+        <p><strong>Ability:</strong> Communicates with Bio-Mech Animals</p>
+        <p><strong>Weapon:</strong> After Image Attack</p>
+        <p>
+          Once a man of nature and peace, SeWu was corrupted by machines. Now he
+          commands a legion of bio-mech beasts, using their instincts to hunt
+          down intruders.
+        </p>
+        <img src="SeWu_MiniBoss_Card.png" alt="SeWu" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Mini Boss 3 Modal -->
+    <div id="miniBoss3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('miniBoss3')">&times;</span>
+        <h2>Xin - Mini Boss</h2>
+        <p><strong>Ability:</strong> Bio-Spliced Mech Attacks</p>
+        <p><strong>Weapon:</strong> Chemical Projectiles</p>
+        <p>
+          Xin may look like he's mostly human, but he has sacrificed his
+          humanity for power. His body is a twisted blend of flesh and machine,
+          ready to unleash chemical chaos on anyone who dares to challenge him.
+        </p>
+        <img src="Xin_MiniBoss_card.png" alt="Xin" class="modal-image" />
+      </div>
+    </div>
+
+    <!-- Villain Modal -->
+    <div id="villain" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('villain')">&times;</span>
+        <h2>Name Unknown</h2>
+        <p><strong>Ability:</strong> All of the Mini-Bosses he imbued</p>
+        <p><strong>Weapon:</strong> His Entire Being</p>
+        <p>
+          No one know anything about the Bio-Overlord, not even his name. All
+          that you've seen his armies picking up people and bringing them to his
+          city in the middle of the desert. He has your sister and you will
+          stop at nothing to get her back.
+        </p>
+        <img
+          src="MainVillian_Card.png"
+          alt="Bio-Overlord"
+          class="modal-image"
+        />
+      </div>
+    </div>
+
+    <script src="corebound.js" defer></script>
+  </body>
+</html>
