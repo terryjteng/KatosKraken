@@ -1,0 +1,264 @@
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff9f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #f04e23;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0d0d0d;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0d0d0d;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #aa3f63;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo-text {
+  height: 28px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffbad2;
+}
+
+/* Description Section */
+.bbc-description {
+    background: #fff4e6;
+    color: #2d2d2d;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.bbc-description h2 {
+    font-size: 2rem;
+    color: #f04e23;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.bbc-description p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+.bbc-hero-banner {
+  background-image: url('BigBossCleanup_PageBanner.png'); /* Replace with correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  margin-top: -1in;
+  color: white;
+  z-index: 0;
+}
+
+.bbc-hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4); /* Optional overlay for text readability */
+  z-index: 1;
+}
+
+.bbc-hero-content {
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bbc-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff4da6;
+}
+
+.bbc-hero-content p {
+  font-size: 1.25rem;
+  color: #f0f0f0;
+}
+
+
+.bbc-overview {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  text-align: center;
+  border-top: 2px solid #ff0055;
+  border-bottom: 2px solid #ff0055;
+}
+
+.bbc-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.bbc-overview p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Gameplay Section */
+.gameplay {
+  padding: 3rem 1.5rem;
+  background-color: #0d0d0d;
+  color: #ffeedd;
+  border-top: 2px solid #f04e23;
+  border-bottom: 2px solid #f04e23;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gameplay h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.gameplay p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+}
+
+.gameplay img {
+  margin-top: 2rem;
+  max-width: 100%;
+  border: 3px solid #f04e23;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Development Section */
+.development-note {
+  background-color: #1a1a1a;
+  color: #ffeedd;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 2px solid #f04e23;
+  border-bottom: 2px solid #f04e23;
+  margin-top:auto;
+}
+
+.development-note h3 {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.development-note p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.development-note a {
+  color: #f04e23;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
