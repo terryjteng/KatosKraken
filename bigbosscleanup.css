@@ -262,3 +262,96 @@ footer {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 0.4rem 0;
+    list-style: none;
+    z-index: 1000;
+    border-top: 2px solid #f04e23;
+  }
+
+  .bottom-nav li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #ffbad2;
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 0.2rem;
+  }
+
+  .bbc-hero-banner {
+    height: 300px;
+    background-position: center center;
+    padding: 1rem;
+  }
+
+  .bbc-hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .bbc-hero-content p {
+    font-size: 1rem;
+  }
+
+  .bbc-description,
+  .bbc-overview,
+  .gameplay,
+  .development-note {
+    padding: 1.5rem 1rem;
+  }
+
+  .gameplay h2 {
+    font-size: 1.8rem;
+  }
+
+  .gameplay p {
+    font-size: 1rem;
+  }
+
+  .development-note h3 {
+    font-size: 1.4rem;
+  }
+
+  .development-note p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding-bottom: 60px; /* add buffer for mobile nav */
+  }
+}
+

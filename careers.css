@@ -218,3 +218,96 @@ footer {
   color: #fff;
   font-size: 0.8rem;
 }
+
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 0.4rem 0;
+    list-style: none;
+    z-index: 1000;
+    border-top: 2px solid #ff69b4;
+  }
+
+  .bottom-nav li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #ffbad2;
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 0.2rem;
+  }
+
+  .hero {
+    padding: 60px 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .careers-disclaimer {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .job-list {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .job-posting {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  footer {
+    padding-bottom: 60px; /* mobile nav clearance */
+  }
+}
+

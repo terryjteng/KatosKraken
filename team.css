@@ -222,3 +222,105 @@ footer {
   color: #fff;
   font-size: 0.8rem;
 }
+
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    padding: 0.4rem 0;
+    list-style: none;
+    z-index: 1000;
+    border-top: 2px solid #aa5d3c;
+  }
+
+  .bottom-nav li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #ffbad2;
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 0.2rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .team-member {
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-member p.role {
+    font-size: 1rem;
+  }
+
+  .team-member .bio {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .studio-values {
+    padding: 2rem 1rem;
+  }
+
+  .studio-values h2 {
+    font-size: 1.8rem;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  footer {
+    padding-bottom: 60px; /* prevent overlap */
+  }
+}
+

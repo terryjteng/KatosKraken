@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="corebound.css" />
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNBTKR4XC6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YNBTKR4XC6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-YNBTKR4XC6');
-</script>
-    
+      gtag("config", "G-YNBTKR4XC6");
+    </script>
   </head>
   <body>
     <header class="navbar">
-      <div class="logo">
-        <img src="KatoK_indexLogo.png" alt="Kato's Kraken Logo" />
-        <img
-          src="LogoName.png"
-          alt="Kato's Kraken Text Logo"
-          class="logo-text"
-        />
+      <div class="navbar desktop-only">
+        <div class="logo">
+          <img src="KatoK_indexLogo.png" alt="Kato's Kraken Logo" />
+          <img
+            src="LogoName.png"
+            alt="Kato's Kraken Text Logo"
+            class="logo-text"
+          />
+        </div>
       </div>
       <nav>
         <ul class="nav-links">
@@ -44,10 +50,71 @@
         </ul>
       </nav>
     </header>
+    <header class="mobile-navbar">
+      <nav>
+        <ul class="bottom-nav">
+          <li>
+            <a href="index.html">
+              <img
+                src="Home_MobileLogo.png"
+                alt="Home"
+                class="nav-icon"
+              />
+              <span>Corebound</span>
+            </a>
+          </li>
+          <li>
+            <a href="bigbosscleanup.html">
+              <img src="BBC_MobileLogo.png" alt="Big Boss" class="nav-icon" />
+              <span>Big Boss</span>
+            </a>
+          </li>
+          <li>
+            <a href="team.html">
+              <img src="Team_MobileLogo.png" alt="Team" class="nav-icon" />
+              <span>Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="careers.html">
+              <img
+                src="Careers_MobileLogo.png"
+                alt="Careers"
+                class="nav-icon"
+              />
+              <span>Careers</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <img src="About_MobileLogo.png" alt="About" class="nav-icon" />
+              <span>About</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <img src="Corebound_Logo.png" alt="Corebound Logo" class="corebound-logo" />
 
     <div class="logo-divider"></div>
+
+    <!-- MOBILE VERSION ONLY -->
+    <section class="development-status mobile-only">
+      <h2>🚧 In Development</h2>
+      <p>
+        <strong>Corebound</strong> is currently in active development by a
+        passionate indie team at Kato’s Kraken. Everything you see here — from
+        the art to the story — is part of a growing vision still taking shape.
+      </p>
+      <p>
+        If you’re a developer, artist, writer, animator, or just someone who’s
+        excited about the world of Corebound, we’d love to hear from you. We're
+        currently welcoming volunteers and collaborators to join our creative
+        journey.
+      </p>
+      <a href="careers.html" class="join-button">Join the Team</a>
+    </section>
 
     <!-- CHARACTER CARDS -->
     <section class="character-cards">
@@ -85,7 +152,7 @@
     </section>
 
     <!-- DEVELOPMENT STATUS SECTION -->
-    <section class="development-status">
+    <section class="development-status desktop-only">
       <h2>🚧 In Development</h2>
       <p>
         <strong>Corebound</strong> is currently in active development by a
@@ -149,8 +216,8 @@
       </div>
     </section>
 
-    <!-- PITCH DECK EMBED -->
-    <section class="pitch-deck">
+    <!-- PITCH DECK (Desktop) -->
+    <section class="pitch-deck desktop-only">
       <h2>Pitch Deck</h2>
       <p>
         Explore our development vision, timeline, and financial analysis in the
@@ -166,6 +233,15 @@
           allowfullscreen
         ></iframe>
       </div>
+    </section>
+
+    <!-- PITCH DECK (Mobile Replacement) -->
+    <section class="pitch-deck mobile-only">
+      <h2>Pitch Deck</h2>
+      <p>
+        If you're interested in viewing the pitch deck, please visit the site on
+        a desktop device or contact Terry (CEO & Founder).
+      </p>
     </section>
 
     <!-- FOOTER -->
@@ -253,8 +329,8 @@
         <p>
           No one know anything about the Bio-Overlord, not even his name. All
           that you've seen his armies picking up people and bringing them to his
-          city in the middle of the desert. He has your sister and you will
-          stop at nothing to get her back.
+          city in the middle of the desert. He has your sister and you will stop
+          at nothing to get her back.
         </p>
         <img
           src="MainVillian_Card.png"
