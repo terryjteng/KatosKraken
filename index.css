@@ -449,3 +449,122 @@ footer {
   font-size: 0.9rem;
   border-top: 2px solid #ff497c;
 }
+
+
+/* === Bottom Navbar (Mobile) === */
+.mobile-navbar {
+  display: none;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d0d0d;
+  padding: 0.4rem 0;
+  list-style: none;
+  z-index: 1000;
+  border-top: 2px solid #ff4081;
+}
+
+.bottom-nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.bottom-nav a:hover {
+  color: #ffbad2;
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 0.2rem;
+}
+
+
+/* === Carousel for Mobile === */
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: 45vh !important;
+  }
+
+  .hero-slide {
+    justify-content: center;
+    padding-left: 0;
+    background-position: center center;
+  }
+
+  .carousel-indicators {
+    bottom: 8px;
+    gap: 0.5rem;
+  }
+
+  .carousel-indicators .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .logo-animation {
+    max-width: 70vw;
+  }
+
+
+  .games-showcase {
+    gap: 2rem;
+  }
+
+  .game-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .game-info p {
+    font-size: 1rem;
+  }
+
+  .learn-more-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .team-container {
+    gap: 24px;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+
+  .join-crew-section h2 {
+    font-size: 2rem;
+  }
+
+  .join-crew-section p {
+    font-size: 1rem;
+  }
+}
+
+/* === Hide desktop navbar if present === */
+@media (max-width: 768px) {
+  .navbar {
+    display: none !important;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+}
