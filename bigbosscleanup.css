@@ -18,7 +18,6 @@ img {
 }
 
 /* Navbar */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -31,9 +30,7 @@ img {
 }
 
 /* Dropdown container */
-.dropdown {
-  position: relative;
-}
+.dropdown { position: relative; }
 
 .dropdown-menu {
   position: absolute;
@@ -59,28 +56,12 @@ img {
   transition: background 0.3s;
 }
 
-.dropdown-menu li a:hover {
-  background-color: #aa3f63;
-}
+.dropdown-menu li a:hover { background-color: #aa3f63; }
+.dropdown:hover .dropdown-menu { display: flex; }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logo img {
-  height: 60px;
-}
-
-.logo-text {
-  height: 28px;
-}
+.logo { display: flex; align-items: center; gap: 1rem; }
+.logo img { height: 60px; }
+.logo-text { height: 28px; }
 
 .nav-links {
   list-style: none;
@@ -89,40 +70,32 @@ img {
   margin: 0;
   padding: 0;
 }
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: #ffbad2;
-}
+.nav-links a { color: #fff; font-weight: bold; }
+.nav-links a:hover { color: #ffbad2; }
 
 /* Description Section */
 .bbc-description {
-    background: #fff4e6;
-    color: #2d2d2d;
-    padding: 3rem 1.5rem;
-    text-align: center;
+  background: #fff4e6;
+  color: #2d2d2d;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
-
 .bbc-description h2 {
-    font-size: 2rem;
-    color: #f04e23;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 0 #fff;
+  font-size: 2rem;
+  color: #f04e23;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0 #fff;
+}
+.bbc-description p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
-.bbc-description p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.7;
-}
+/* Hero banner (your theme) */
 .bbc-hero-banner {
-  background-image: url('BigBossCleanup_PageBanner.png'); /* Replace with correct path */
+  background-image: url('BigBossCleanup_PageBanner.png'); /* update path if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,39 +106,21 @@ img {
   text-align: center;
   padding: 2rem;
   position: relative;
-  margin-top: -1in;
+  margin-top: -1in; /* kept per your theme */
   color: white;
   z-index: 0;
 }
-
 .bbc-hero-banner::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4); /* Optional overlay for text readability */
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
   z-index: 1;
 }
+.bbc-hero-content { z-index: 2; max-width: 800px; }
+.bbc-hero-content h1 { font-size: 3rem; margin-bottom: 1rem; color: #ff4da6; }
+.bbc-hero-content p { font-size: 1.25rem; color: #f0f0f0; }
 
-.bbc-hero-content {
-  z-index: 2;
-  max-width: 800px;
-}
-
-.bbc-hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #ff4da6;
-}
-
-.bbc-hero-content p {
-  font-size: 1.25rem;
-  color: #f0f0f0;
-}
-
-
+/* Overview */
 .bbc-overview {
   padding: 2rem;
   background-color: #1e1e1e;
@@ -174,22 +129,13 @@ img {
   border-top: 2px solid #ff0055;
   border-bottom: 2px solid #ff0055;
 }
-
 .bbc-overview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ffcc00;
-  text-shadow: 1px 1px 0 #000;
+  font-size: 2rem; margin-bottom: 1rem;
+  color: #ffcc00; text-shadow: 1px 1px 0 #000;
 }
+.bbc-overview p { max-width: 800px; margin: auto; font-size: 1.2rem; line-height: 1.6; }
 
-.bbc-overview p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Gameplay Section */
+/* Gameplay */
 .gameplay {
   padding: 3rem 1.5rem;
   background-color: #0d0d0d;
@@ -200,158 +146,103 @@ img {
   position: relative;
   z-index: 1;
 }
-
 .gameplay h2 {
-  font-size: 2.5rem;
-  color: #ffcc00;
-  margin-bottom: 1rem;
+  font-size: 2.5rem; color: #ffcc00; margin-bottom: 1rem;
   text-shadow: 2px 2px 0 #000;
 }
-
 .gameplay p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #f0f0f0;
+  max-width: 800px; margin: 0 auto;
+  font-size: 1.2rem; line-height: 1.8; color: #f0f0f0;
 }
-
 .gameplay img {
-  margin-top: 2rem;
-  max-width: 100%;
+  margin-top: 2rem; max-width: 100%;
   border: 3px solid #f04e23;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Development Section */
-.development-note {
-  background-color: #1a1a1a;
+/* ---- Simple Demo styles (already match your palette) ---- */
+.bbc-demo {
+  padding: 2.5rem 1.5rem;
+  background: #0d0d0d;
   color: #ffeedd;
-  padding: 2rem 1.5rem;
-  text-align: center;
   border-top: 2px solid #f04e23;
   border-bottom: 2px solid #f04e23;
-  margin-top:auto;
-}
-
-.development-note h3 {
-  font-size: 1.8rem;
-  color: #ffcc00;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 0 #000;
-}
-
-.development-note p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.development-note a {
-  color: #f04e23;
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: #ddd;
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  margin-top: 1rem;
+}
+.bbc-demo h2 { color: #ffcc00; text-shadow: 1px 1px 0 #000; margin: 0 0 0.5rem; }
+.bbc-demo-sub { color: #f0f0f0; margin: 0 auto 1.25rem; max-width: 780px; }
+.demo-key { padding: .1rem .4rem; border-radius: .35rem; }
+.demo-trash { background: #333; color: #eee; }
+.demo-puddle { background: #123a72; color: #cfe8ff; }
+.demo-shards { background: #4a0f16; color: #ffd7d7; }
+
+.bbc-demo-wrap {
+  margin: 0 auto; max-width: 980px;
+  background: #111827; border-radius: 18px; padding: 1rem;
+  box-shadow: 0 12px 24px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+#bbc-demo-canvas {
+  width: 100%;
+  height: 420px; /* responsive height; JS will scale for DPR */
+  display: block;
+  border-radius: 12px;
+  background: #0b1220;
+}
+.bbc-demo-hud {
+  position: absolute; top: .75rem; left: .75rem; right: .75rem;
+  display: flex; justify-content: space-between; gap: .75rem;
+  color: #fff; font-weight: 600; z-index: 2; pointer-events: none;
+  text-shadow: 0 1px 0 #000;
+}
+.bbc-demo-controls {
+  margin-top: .75rem; display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap;
+}
+.bbc-demo-controls button {
+  background: #1f2937; color: #fff; padding: .5rem .9rem; border-radius: 10px; border: 1px solid #334155; cursor: pointer;
+}
+.bbc-demo-controls button:hover { background: #2b3a50; }
+.bbc-demo-help { color: #cbd5e1; font-size: .9rem; margin-left: .5rem; }
+.bbc-demo-note { color: #cbd5e1; margin-top: .75rem; font-size: .95rem; }
+
+/* Development note + footer */
+.development-note {
+  background-color: #1a1a1a; color: #ffeedd; padding: 2rem 1.5rem; text-align: center;
+  border-top: 2px solid #f04e23; border-bottom: 2px solid #f04e23; margin-top:auto;
+}
+.development-note h3 { font-size: 1.8rem; color: #ffcc00; margin-bottom: 1rem; text-shadow: 1px 1px 0 #000; }
+.development-note p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+.development-note a { color: #f04e23; text-decoration: underline; }
+
+footer {
+  background-color: #222; color: #ddd; text-align: center; padding: 2rem 1rem; font-size: 0.9rem; margin-top: 1rem;
 }
 
-/* Responsive layout for mobile */
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
-
-  .mobile-navbar {
-    display: block;
-  }
+  .desktop-only { display: none !important; }
+  .mobile-navbar { display: block; }
 
   .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0d0d0d;
-    padding: 0.4rem 0;
-    list-style: none;
-    z-index: 1000;
+    display: flex; justify-content: space-around; align-items: center;
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background-color: #0d0d0d; padding: 0.4rem 0; list-style: none; z-index: 1000;
     border-top: 2px solid #f04e23;
   }
+  .bottom-nav li { flex: 1; text-align: center; }
+  .bottom-nav a { display: flex; flex-direction: column; align-items: center; color: #fff; font-size: 0.75rem; }
+  .bottom-nav a:hover { color: #ffbad2; }
+  .nav-icon { width: 22px; height: 22px; margin-bottom: 0.2rem; }
 
-  .bottom-nav li {
-    flex: 1;
-    text-align: center;
-  }
+  .bbc-hero-banner { height: 300px; background-position: center center; padding: 1rem; }
+  .bbc-hero-content h1 { font-size: 1.6rem; }
+  .bbc-hero-content p { font-size: 1rem; }
 
-  .bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.75rem;
-    transition: color 0.2s ease;
-  }
-
-  .bottom-nav a:hover {
-    color: #ffbad2;
-  }
-
-  .nav-icon {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 0.2rem;
-  }
-
-  .bbc-hero-banner {
-    height: 300px;
-    background-position: center center;
-    padding: 1rem;
-  }
-
-  .bbc-hero-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .bbc-hero-content p {
-    font-size: 1rem;
-  }
-
-  .bbc-description,
-  .bbc-overview,
-  .gameplay,
-  .development-note {
-    padding: 1.5rem 1rem;
-  }
-
-  .gameplay h2 {
-    font-size: 1.8rem;
-  }
-
-  .gameplay p {
-    font-size: 1rem;
-  }
-
-  .development-note h3 {
-    font-size: 1.4rem;
-  }
-
-  .development-note p {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    padding-bottom: 60px; /* add buffer for mobile nav */
-  }
+  .bbc-description, .bbc-overview, .gameplay, .development-note { padding: 1.5rem 1rem; }
+  .gameplay h2 { font-size: 1.8rem; }
+  .gameplay p { font-size: 1rem; }
+  .development-note h3 { font-size: 1.4rem; }
+  .development-note p { font-size: 0.95rem; }
+  footer { padding-bottom: 60px; } /* buffer for mobile bottom nav */
 }
-

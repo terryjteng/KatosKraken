@@ -3,132 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="icon" type="image/png" href="KatoK_logoOnly.png" />
+    <link rel="icon" type="image/png" href="KatoK_logoOnly.png" />
     <title>Big Boss Cleanup</title>
     <link rel="stylesheet" href="bigbosscleanup.css" />
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNBTKR4XC6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YNBTKR4XC6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-YNBTKR4XC6');
-</script>
-    
+      gtag("config", "G-YNBTKR4XC6");
+    </script>
   </head>
   <body>
     <!-- HEADER -->
     <!-- DESKTOP NAVBAR -->
-<header class="navbar desktop-only">
-  <div class="logo">
-    <img src="KatoK_indexLogo.png" alt="Kato's Kraken Logo" />
-    <img src="LogoName.png" alt="Kato's Kraken Text Logo" class="logo-text" />
-  </div>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Games</a>
-        <ul class="dropdown-menu">
-          <li><a href="corebound.html">Corebound</a></li>
-          <li><a href="bigbosscleanup.html">Big Boss Cleanup</a></li>
+    <header class="navbar desktop-only">
+      <div class="logo">
+        <img src="KatoK_indexLogo.png" alt="Kato's Kraken Logo" />
+        <img
+          src="LogoName.png"
+          alt="Kato's Kraken Text Logo"
+          class="logo-text"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Games</a>
+            <ul class="dropdown-menu">
+              <li><a href="corebound.html">Corebound</a></li>
+              <li><a href="bigbosscleanup.html">Big Boss Cleanup</a></li>
+            </ul>
+          </li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
-      </li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
+      </nav>
+    </header>
 
-<!-- MOBILE NAVBAR -->
-<header class="mobile-navbar">
-  <nav>
-    <ul class="bottom-nav">
-      <li>
-        <a href="index.html">
-          <img src="Home_MobileLogo.png" alt="Home" class="nav-icon" />
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="corebound.html">
-          <img src="Corebound_MobileLogo.png" alt="Corebound" class="nav-icon" />
-          <span>Corebound</span>
-        </a>
-      </li>
-      <li>
-        <a href="team.html">
-          <img src="Team_MobileLogo.png" alt="Team" class="nav-icon" />
-          <span>Team</span>
-        </a>
-      </li>
-      <li>
-        <a href="careers.html">
-          <img src="Careers_MobileLogo.png" alt="Careers" class="nav-icon" />
-          <span>Careers</span>
-        </a>
-      </li>
-      <li>
-        <a href="about.html">
-          <img src="About_MobileLogo.png" alt="About" class="nav-icon" />
-          <span>About</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
+    <!-- MOBILE NAV (kept for your theme’s responsive behavior) -->
+    <nav class="mobile-navbar">
+      <a href="#overview">Overview</a>
+      <a href="#gameplay">Gameplay</a>
+      <a href="#demo">Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-
-    <!-- HERO SECTION -->
+    <!-- HERO (kept; uses your background image and styling) -->
     <section class="bbc-hero-banner">
-      <div class="bbc-hero-content"></div>
-    </section>
-
-    <!-- DESCRIPTION SECTION -->
-    <section class="bbc-overview">
-      <h2>Welcome to Big Boss Cleanup</h2>
-      <p>
-        After the final boss falls and the street fights finish, someone still
-        has to mop up the mess. That someone... is you. Grab your mop, dodge the
-        debris, and clean up the carnage left behind by heroes too busy basking
-        in glory.
-      </p>
-    </section>
-
-    <!-- GAMEPLAY SECTION -->
-    <section class="gameplay">
-      <div class="content">
-        <h2>Gameplay</h2>
+      <div class="bbc-hero-content">
+        <h1>Clean Up After the Fight</h1>
         <p>
-          The game is an arcade-style cleanup challenge where each level
-          represents a new battlefield with unique hazards and environmental
-          danger. Dodge lingering projectiles, maneuver through debris,
-          and rack up style points for efficient and stylish cleaning.
+          Lightweight prototype: pick up trash, mop puddles, and sweep glass
+          after a chaotic bout. Minimal code, fast load, replayable.
         </p>
       </div>
     </section>
-    <!-- Development SECTION -->
-    <section class="development-note">
-      <h3>Still in Early Development</h3>
+
+    <!-- OVERVIEW (kept palette/structure) -->
+    <section id="overview" class="bbc-overview">
+      <h2>Overview</h2>
       <p>
-        Big Boss Cleanup is currently in the early concept stage and doesn’t
-        have any gameplay or footage to display just yet. We're actively
-        building out the vision and would love your help bringing it to life. If
-        you're interested in contributing, please
-        <a href="careers.html">visit our Careers page</a> and reach out!
+        After the match ends, someone has to clean the arena. This demo is a
+        compact, browser-native prototype that highlights design and production
+        chops without heavy assets.
       </p>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
+    <!-- GAMEPLAY (kept section name/feel) -->
+    <section id="gameplay" class="gameplay">
+      <h2>Gameplay</h2>
       <p>
-        Big Boss Cleanup is a project by Kato’s Kraken, a fictional indie studio
-        created to empower emerging creators. © 2025 All rights reserved.
+        Collect <strong>trash</strong> instantly,
+        <strong>mop puddles</strong> with the Mop, and
+        <strong>sweep shards</strong> with the Broom. Randomized layouts keep
+        each run fresh.
       </p>
+      <!-- You can keep or remove any images you already had here -->
+    </section>
+
+    <!-- PLAYABLE DEMO (Simple Prototype) -->
+    <section id="demo" class="bbc-demo">
+      <h2>Playable Demo (Simple Prototype)</h2>
+      <p class="bbc-demo-sub">
+        Controls: WASD/Arrows to move · <strong>E</strong> to clean ·
+        <strong>Q</strong> to switch tool (Mop/Broom)
+      </p>
+
+      <div class="bbc-demo-wrap">
+        <div class="bbc-demo-hud">
+          <div>Score: <span id="demoScore">0</span></div>
+          <div>Time: <span id="demoTime">60</span>s</div>
+          <div>Tool: <span id="demoTool">Mop</span></div>
+        </div>
+        <canvas
+          id="bbc-demo-canvas"
+          aria-label="Big Boss Cleanup Demo"
+        ></canvas>
+        <div class="bbc-demo-controls">
+          <button id="demoStart">Start</button>
+          <button id="demoNew">New Level</button>
+          <button id="demoToolBtn">Switch Tool (Q)</button>
+          <span class="bbc-demo-help">Replayable: new layouts each run</span>
+        </div>
+      </div>
+
+      <p class="bbc-demo-note">
+        This is a lightweight prototype for portfolio purposes (no trademarked
+        fighter assets). Big Boss Cleanup can be imagined as either a fast-paced
+        overhead 2D game or a more immersive 3D simulator. In the 2D version,
+        you navigate a top-down arena after each brawl, using the right tools to
+        clean up procedurally generated messes while dodging lingering hazards.
+        In the 3D version, you step directly into the aftermath in first- or
+        third-person, tackling debris, puddles, and battle damage with
+        physics-driven tools for a more realistic, simulator-style experience.
+      </p>
+    </section>
+
+    <!-- DEVELOPMENT NOTE (kept style) -->
+    <section id="contact" class="development-note">
+      <h3>Next Steps</h3>
+      <p>
+        Ready to expand with sprites, SFX, or a leaderboard? Message me and I’ll
+        ship a fuller build.
+      </p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Big Boss Cleanup · Simple Demo Version</p>
     </footer>
-    <script src="bigbosscleanup.js"></script>
+
+    <!-- Your page interactions (kept) -->
+    <script src="bigbosscleanup.js" defer></script>
+    <!-- Playable demo script (updated) -->
+    <script src="bbc-demo.js" defer></script>
   </body>
 </html>
