@@ -1,5 +1,6 @@
-
-/* Reset and base */
+/* ===========================
+   Reset and base
+   =========================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,9 @@ body {
   color: #1a1a1a;
 }
 
-/* Navbar styles from index.css */
+/* ===========================
+   Navbar (desktop header)
+   =========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -59,7 +62,9 @@ body {
   color: #ffbad2;
 }
 
-/* Dropdown styles */
+/* ===========================
+   Dropdown
+   =========================== */
 .dropdown {
   position: relative;
 }
@@ -96,7 +101,9 @@ body {
   display: flex;
 }
 
-/* Top Banner Styling */
+/* ===========================
+   Top Banner
+   =========================== */
 .top-banner {
   width: 100%;
   display: flex;
@@ -122,14 +129,14 @@ body {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Kato Pic Section */
+/* ===========================
+   Kato Pic / Hero
+   =========================== */
 .hero {
   position: relative;
   width: 100%;
   height: 60vh;
   overflow: hidden;
-  
 }
 
 .hero-banner {
@@ -143,7 +150,7 @@ body {
 }
 
 .banner-frame {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -171,9 +178,11 @@ body {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/* About Content */
+/* ===========================
+   About Content
+   =========================== */
 .about {
- max-width: 900px;
+  max-width: 900px;
   margin: 4rem auto;
   padding: 2rem 2.5rem;
   background-color: #f9f9f9;
@@ -195,7 +204,7 @@ body {
 }
 
 .about p {
-   margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
   font-size: 1.1rem;
   color: #444;
 }
@@ -209,7 +218,9 @@ body {
   color: #4f8a8b;
 }
 
-/* Value Cards */
+/* ===========================
+   Value Cards
+   =========================== */
 .values {
   display: flex;
   justify-content: center;
@@ -245,7 +256,9 @@ body {
   color: #444;
 }
 
-/* Footer */
+/* ===========================
+   Footer
+   =========================== */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -254,23 +267,32 @@ footer {
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
+/* =========================================================
+   MOBILE UI VISIBILITY FIX
+   Hide mobile UI by default (desktop/tablet)
+   ========================================================= */
+.mobile-navbar,
+.bottom-nav {
+  display: none !important; /* critical: prevents spillover on desktop */
+}
 
-  .mobile-navbar {
-    display: block;
-  }
+/* =========================================================
+   MOBILE (<=768px): show mobile UI, hide desktop header
+   ========================================================= */
+@media screen and (max-width: 768px){
+  /* Hide desktop header on mobile */
+  .desktop-only { display: none !important; }
 
+  /* Show mobile header wrapper */
+  .mobile-navbar { display: block !important; }
+
+  /* Fixed bottom icon bar */
   .bottom-nav {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0; left: 0; width: 100%;
     background-color: #0d0d0d;
     padding: 0.4rem 0;
     list-style: none;
@@ -303,9 +325,8 @@ footer {
     margin-bottom: 0.2rem;
   }
 
-  .top-banner {
-    padding: 1rem;
-  }
+  /* Responsive tweaks for content */
+  .top-banner { padding: 1rem; }
 
   .banner-image {
     border-radius: 12px;
@@ -313,17 +334,11 @@ footer {
     height: auto;
   }
 
-  .hero {
-    height: auto;
-  }
+  .hero { height: auto; }
 
-  .banner-frame {
-    padding: 1.5rem 1rem;
-  }
+  .banner-frame { padding: 1.5rem 1rem; }
 
-  .banner-frame img {
-    width: 90%;
-  }
+  .banner-frame img { width: 90%; }
 
   .hero-title {
     font-size: 1.6rem;
@@ -335,13 +350,8 @@ footer {
     padding: 1.5rem;
   }
 
-  .about h2 {
-    font-size: 1.6rem;
-  }
-
-  .about p {
-    font-size: 1rem;
-  }
+  .about h2 { font-size: 1.6rem; }
+  .about p { font-size: 1rem; }
 
   .values {
     flex-direction: column;
@@ -354,16 +364,64 @@ footer {
     padding: 1.2rem;
   }
 
-  .value-card h3 {
-    font-size: 1.2rem;
-  }
+  .value-card h3 { font-size: 1.2rem; }
+  .value-card p { font-size: 0.95rem; }
 
-  .value-card p {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    padding-bottom: 60px;
-  }
 }
 
+/* ===========================
+   Kickstarter CTA (GLOBAL)
+   =========================== */
+.kickstarter-cta {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  color: #222;
+}
+
+.kickstarter-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #2d4059;
+}
+
+.kickstarter-cta p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.kickstarter-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #05ce78;         /* recognizable Kickstarter-ish green */
+  color: #0b1f17;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.kickstarter-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+}
+
+/* ===========================
+   Mobile-only tweaks for CTA + safe space above bottom nav
+   =========================== */
+@media screen and (max-width: 768px) {
+  .kickstarter-cta {
+    margin: 1.5rem 1rem 5rem;  /* extra bottom margin so it clears fixed bottom nav */
+    padding: 1.5rem;
+  }
+
+  /* keep footer content clear of fixed bottom bar */
+  footer { padding-bottom: 60px; }
+
+}
