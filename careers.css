@@ -1,3 +1,8 @@
+/* ===========================
+   Careers – Full CSS
+   (Desktop-safe; mobile bottom nav only on ≤768px)
+   =========================== */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +12,6 @@ body {
 }
 
 /* Navbar */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -18,9 +22,7 @@ body {
 }
 
 /* Dropdown container */
-.dropdown {
-  position: relative;
-}
+.dropdown { position: relative; }
 
 .dropdown-menu {
   position: absolute;
@@ -46,32 +48,21 @@ body {
   transition: background 0.3s;
 }
 
-.dropdown-menu li a:hover {
-  background-color: #aa3f63;
-}
+.dropdown-menu li a:hover { background-color: #aa3f63; }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-menu { display: flex; }
 
-
-
-
+/* Branding */
 .logo {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+.logo img { height: 60px; }
+.logo-text { height: 28px; }
 
-.logo img {
-  height: 60px;
-}
-
-.logo-text {
-  height: 28px;
-}
-
+/* Desktop Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -85,17 +76,14 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
-.nav-links a:hover {
-  color: #ffbad2;
-}
+.nav-links a:hover { color: #ffbad2; }
 
 /* Header Section */
-
 .hero {
   position: relative;
-  background: linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9)), 
-              url('Careers_Background.png') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9)),
+    url('Careers_Background.png') center/cover no-repeat;
   color: #f0f0f0;
   padding: 100px 20px;
   text-align: center;
@@ -120,7 +108,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Sections */
 .section {
   width: 100%;
   max-width: 1200px;
@@ -136,7 +124,7 @@ body {
   text-align: center;
 }
 
-/*Disclaimer Section */
+/* Disclaimer */
 .careers-disclaimer {
   background-color: rgba(0, 0, 0, 0.7);
   color: #f2f2f2;
@@ -156,7 +144,6 @@ body {
 }
 
 /* Job Listings */
-
 .job-list {
   align-items: center;
   display: flex;
@@ -175,6 +162,7 @@ body {
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .job-posting:hover {
@@ -202,15 +190,14 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.15s ease;
 }
-
 .apply-button:hover {
   background-color: #ffc107;
   transform: scale(1.05);
 }
 
-
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -219,24 +206,32 @@ footer {
   font-size: 0.8rem;
 }
 
-/* === Mobile Styles === */
+/* =========================================================
+   MOBILE UI VISIBILITY (Desktop default)
+   Hide mobile header + bottom bar on desktop/tablet
+   ========================================================= */
+.mobile-navbar,
+.bottom-nav {
+  display: none !important; /* prevents spillover on desktop */
+}
+
+/* =========================================================
+   MOBILE (≤768px): show mobile nav, hide desktop header
+   ========================================================= */
 @media screen and (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
+  /* Hide desktop header on mobile */
+  .desktop-only { display: none !important; }
 
-  .mobile-navbar {
-    display: block;
-  }
+  /* Show mobile header wrapper */
+  .mobile-navbar { display: block !important; }
 
+  /* Fixed bottom navigation bar */
   .bottom-nav {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0; left: 0; width: 100%;
     background-color: #0d0d0d;
     padding: 0.4rem 0;
     list-style: none;
@@ -244,10 +239,7 @@ footer {
     border-top: 2px solid #ff69b4;
   }
 
-  .bottom-nav li {
-    flex: 1;
-    text-align: center;
-  }
+  .bottom-nav li { flex: 1; text-align: center; }
 
   .bottom-nav a {
     display: flex;
@@ -258,10 +250,7 @@ footer {
     font-size: 0.75rem;
     transition: color 0.2s ease;
   }
-
-  .bottom-nav a:hover {
-    color: #ffbad2;
-  }
+  .bottom-nav a:hover { color: #ffbad2; }
 
   .nav-icon {
     width: 22px;
@@ -269,45 +258,19 @@ footer {
     margin-bottom: 0.2rem;
   }
 
-  .hero {
-    padding: 60px 1rem;
-  }
+  /* Mobile spacing & type */
+  .hero { padding: 60px 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; line-height: 1.6; }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+  .careers-disclaimer { padding: 1.5rem 1rem; font-size: 0.9rem; }
 
-  .hero p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+  .section { padding: 2rem 1rem; }
+  .section h2 { font-size: 1.6rem; }
 
-  .careers-disclaimer {
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-  }
+  .job-list { flex-direction: column; padding: 1rem; gap: 1.5rem; }
+  .job-posting { max-width: 100%; padding: 1rem; }
 
-  .section {
-    padding: 2rem 1rem;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-
-  .job-list {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  .job-posting {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  footer {
-    padding-bottom: 60px; /* mobile nav clearance */
-  }
+  /* keep footer clear of fixed bar */
+  footer { padding-bottom: 60px; }
 }
-
