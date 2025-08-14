@@ -1,3 +1,9 @@
+/* ===========================
+   Team Page – Full CSS
+   (Desktop-safe; mobile bottom nav only on ≤768px)
+   =========================== */
+
+/* Base */
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +12,7 @@ body {
   color: #3e2f2f;
 }
 
+/* Desktop Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,10 +22,8 @@ body {
   color: #fff;
 }
 
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
+/* Dropdown */
+.dropdown { position: relative; }
 
 .dropdown-menu {
   position: absolute;
@@ -44,29 +49,19 @@ body {
   transition: background 0.3s;
 }
 
-.dropdown-menu li a:hover {
-  background-color: #aa3f63;
-}
+.dropdown-menu li a:hover { background-color: #aa3f63; }
+.dropdown:hover .dropdown-menu { display: flex; }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
+/* Branding */
 .logo {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+.logo img { height: 60px; }
+.logo-text { height: 28px; }
 
-.logo img {
-  height: 60px;
-}
-
-.logo-text {
-  height: 28px;
-}
-
+/* Desktop Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -81,18 +76,14 @@ body {
   font-weight: bold;
 }
 
-.nav-links a.active {
-  border-bottom: 2px solid #ffbad2;
-}
+.nav-links a.active { border-bottom: 2px solid #ffbad2; }
+.nav-links a:hover { color: #ffbad2; }
 
-.nav-links a:hover {
-  color: #ffbad2;
-}
-
+/* Section */
 .section {
   display: flex;
-  flex-direction: column; /* NEW: stack children vertically */
-  align-items: center;    /* NEW: center children horizontally */
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -110,8 +101,7 @@ body {
   padding-bottom: 0.5rem;
 }
 
-
-
+/* Team grid */
 .team-container {
   display: flex;
   justify-content: center;
@@ -130,9 +120,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.team-member:hover {
-  transform: translateY(-5px);
-}
+.team-member:hover { transform: translateY(-5px); }
 
 .team-member img {
   width: 100%;
@@ -162,8 +150,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Studio Values Section */
-
+/* Studio Values */
 .studio-values {
   padding: 4rem 2rem;
   background-color: #fff0e6;
@@ -209,12 +196,10 @@ body {
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -223,24 +208,32 @@ footer {
   font-size: 0.8rem;
 }
 
-/* === Mobile Styles === */
+/* ===========================
+   MOBILE UI VISIBILITY (Desktop default)
+   Hide mobile header + bottom bar on desktop/tablet
+   =========================== */
+.mobile-navbar,
+.bottom-nav {
+  display: none !important; /* critical to prevent desktop spillover */
+}
+
+/* ===========================
+   MOBILE (≤768px): show mobile nav, hide desktop header
+   =========================== */
 @media screen and (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
+  /* Hide desktop header on mobile */
+  .desktop-only { display: none !important; }
 
-  .mobile-navbar {
-    display: block;
-  }
+  /* Show mobile header wrapper */
+  .mobile-navbar { display: block !important; }
 
+  /* Fixed bottom navigation bar */
   .bottom-nav {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 0; left: 0; width: 100%;
     background-color: #0d0d0d;
     padding: 0.4rem 0;
     list-style: none;
@@ -248,10 +241,7 @@ footer {
     border-top: 2px solid #aa5d3c;
   }
 
-  .bottom-nav li {
-    flex: 1;
-    text-align: center;
-  }
+  .bottom-nav li { flex: 1; text-align: center; }
 
   .bottom-nav a {
     display: flex;
@@ -263,19 +253,11 @@ footer {
     transition: color 0.2s ease;
   }
 
-  .bottom-nav a:hover {
-    color: #ffbad2;
-  }
+  .bottom-nav a:hover { color: #ffbad2; }
+  .nav-icon { width: 22px; height: 22px; margin-bottom: 0.2rem; }
 
-  .nav-icon {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 0.2rem;
-  }
-
-  .section h2 {
-    font-size: 2rem;
-  }
+  /* Mobile typography & spacing tweaks */
+  .section h2 { font-size: 2rem; }
 
   .team-container {
     flex-direction: column;
@@ -283,44 +265,17 @@ footer {
     gap: 1.5rem;
   }
 
-  .team-member {
-    margin: 1.5rem 1rem;
-    padding: 1rem;
-  }
+  .team-member { margin: 1.5rem 1rem; padding: 1rem; }
+  .team-member h3 { font-size: 1.5rem; }
+  .team-member p.role { font-size: 1rem; }
+  .team-member .bio { font-size: 0.95rem; padding: 0 0.5rem; }
 
-  .team-member h3 {
-    font-size: 1.5rem;
-  }
+  .studio-values { padding: 2rem 1rem; }
+  .studio-values h2 { font-size: 1.8rem; }
 
-  .team-member p.role {
-    font-size: 1rem;
-  }
+  .values-grid { flex-direction: column; gap: 1.5rem; }
+  .value-card { max-width: 90%; margin: auto; }
 
-  .team-member .bio {
-    font-size: 0.95rem;
-    padding: 0 0.5rem;
-  }
-
-  .studio-values {
-    padding: 2rem 1rem;
-  }
-
-  .studio-values h2 {
-    font-size: 1.8rem;
-  }
-
-  .values-grid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .value-card {
-    max-width: 90%;
-    margin: auto;
-  }
-
-  footer {
-    padding-bottom: 60px; /* prevent overlap */
-  }
+  /* Keep footer content clear of fixed bar */
+  footer { padding-bottom: 60px; }
 }
-
